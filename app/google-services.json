@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "98483037418",
+    "firebase_url": "https://pizza-n-pub-24-775ce.firebaseio.com",
+    "project_id": "pizza-n-pub-24-775ce",
+    "storage_bucket": "pizza-n-pub-24-775ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98483037418:android:acb007452ea770c5",
+        "android_client_info": {
+          "package_name": "capstone.conestoga.pizzanpub24"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98483037418-ktb1t9b7s4b8b48n51vhrupqfippg3js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLPjleFh8dLBoiCkTMgL5m0sXdOFcMTRM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

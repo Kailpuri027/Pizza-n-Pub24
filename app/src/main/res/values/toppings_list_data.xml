@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="toppings">
+        <item>Pepperoni</item>
+        <item>Brooklyn Pepperoni</item>
+        <item>Sausage</item>
+        <item>Beef</item>
+        <item>Ham</item>
+        <item>Bacon</item>
+        <item>Chicken</item>
+        <item>Philly Steak</item>
+        <item>Anchovy</item>
+
+        <item>Cheese</item>
+        <item>American Cheese</item>
+        <item>Cheddar</item>
+        <item>Hot Banana Peppers</item>
+        <item>Black Olives</item>
+        <item>Green Olives</item>
+        <item>Green Pepper</item>
+        <item>Mushroom</item>
+        <item>Pineapple</item>
+        <item>Onion</item>
+        <item>Tomatoes</item>
+        <item>Jalapeno Peppers</item>
+    </string-array>
+</resources>

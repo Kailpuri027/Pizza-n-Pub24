@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="capstone.conestoga.pizzanpub24.TableReservationActivity"
+    tools:showIn="@layout/content_table_reservation">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Enter name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="15"
+        android:id="@+id/personname" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="15"
+        android:layout_marginTop="10dp"
+        android:hint="Enter email address"
+        android:layout_below="@+id/personname"
+        android:id="@+id/personemail" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:layout_marginTop="10dp"
+        android:hint="Enter mobile number"
+        android:layout_below="@+id/personemail"
+        android:ems="15"
+        android:id="@+id/personphn" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="15"
+        android:maxLength="2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/personphn"
+        android:hint="Enter number of persons"
+        android:id="@+id/numpersons" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick date"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/numpersons"
+        android:layout_marginTop="15dp"
+        android:id="@+id/label6" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label6"
+        android:id="@+id/datePicker"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick time"
+        android:layout_marginTop="15dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/datePicker"
+        android:id="@+id/label7" />
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/label7"
+        android:id="@+id/timePicker" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make Reservation"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/timePicker"
+        android:onClick="makeReservation"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button" />
+
+</RelativeLayout>
