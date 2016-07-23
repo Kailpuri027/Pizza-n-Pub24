@@ -2,6 +2,7 @@ package capstone.conestoga.pizzanpub24;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -16,11 +17,17 @@ import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ImageButton delivery;
     ImageButton carryout;
+
+    private FirebaseAuth.AuthStateListener authListener;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +47,11 @@ public class MainActivity extends AppCompatActivity
 
         delivery = (ImageButton) findViewById(R.id.deliveryButton);
         carryout = (ImageButton) findViewById(R.id.carryoutButton);
+
+        //get firebase auth instance
+        auth = FirebaseAuth.getInstance();
+
+        
     }
 
     @Override
@@ -61,12 +73,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -83,7 +91,18 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
 
         } else if (id == R.id.nav_login) {
-            signIn();
+            if(item.getTitle().equals("Login")){
+                authListener = new FirebaseAuth.AuthStateListener() {
+                    @Override
+                    public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                        FirebaseUser user = firebaseAuth.getCurrentUser();
+                        if (user == null) {
+                            // user auth state is changed - user is null
+                            signIn();
+                        }
+                    }
+                };
+            }
         } else if (id == R.id.nav_special) {
             Intent i = new Intent(this,PizzaActivity.class);
             startActivity(i);
