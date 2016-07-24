@@ -41,7 +41,7 @@ public class CreateProfile extends AppCompatActivity {
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
 
         inputEmail = (EditText) findViewById(R.id.email2);
-        inputPassword = (EditText) findViewById(R.id.password);
+        inputPassword = (EditText) findViewById(R.id.pswd);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
@@ -85,11 +85,11 @@ public class CreateProfile extends AppCompatActivity {
                         .addOnCompleteListener(CreateProfile.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(CreateProfile.this, "New user added" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CreateProfile.this, "New user added!", Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
 
                                 if (!task.isSuccessful()) {
-                                    Toast.makeText(CreateProfile.this, "Something went wrong" + task.getException(),
+                                    Toast.makeText(CreateProfile.this, "Something went wrong!" + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
                                     startActivity(new Intent(CreateProfile.this, MainActivity.class));

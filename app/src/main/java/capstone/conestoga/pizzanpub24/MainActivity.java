@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity
         //get firebase auth instance
         auth = FirebaseAuth.getInstance();
 
-        
+
     }
 
     @Override
@@ -91,18 +91,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
 
         } else if (id == R.id.nav_login) {
-            if(item.getTitle().equals("Login")){
-                authListener = new FirebaseAuth.AuthStateListener() {
-                    @Override
-                    public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                        FirebaseUser user = firebaseAuth.getCurrentUser();
-                        if (user == null) {
-                            // user auth state is changed - user is null
-                            signIn();
-                        }
-                    }
-                };
-            }
+            signIn();
         } else if (id == R.id.nav_special) {
             Intent i = new Intent(this,PizzaActivity.class);
             startActivity(i);
