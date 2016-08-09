@@ -3,15 +3,18 @@
     package="capstone.conestoga.pizzanpub24">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name="capstone.conestoga.javafiles.PizzaNPubApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashScreen"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,14 +22,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name="capstone.conestoga.javafiles.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DeliveryOrder"
             android:label="@string/title_activity_main"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="capstone.conestoga.pizzanpub24.MainActivity" />
@@ -34,7 +48,8 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="capstone.conestoga.pizzanpub24.MainActivity" />
@@ -42,15 +57,17 @@
         <activity
             android:name=".CreateProfile"
             android:label="@string/title_activity_create_profile"
-            android:parentActivityName=".DeliveryOrder">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="capstone.conestoga.pizzanpub24.DeliveryOrder" />
+                android:value="capstone.conestoga.pizzanpub24.MainActivity" />
         </activity>
         <activity
             android:name=".MenuActivity"
             android:label="@string/title_activity_menu"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="capstone.conestoga.pizzanpub24.MainActivity" />
@@ -59,6 +76,7 @@
             android:name=".PizzaActivity"
             android:label="@string/title_activity_pizza"
             android:parentActivityName=".MenuActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -67,38 +85,62 @@
         <activity
             android:name=".MakePizzaActivity"
             android:label="@string/title_activity_make_pizza"
-            android:parentActivityName=".PizzaActivity">
+            android:parentActivityName=".PizzaActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="capstone.conestoga.pizzanpub24.PizzaActivity" />
         </activity>
         <activity
-            android:name=".ProfileActivity"
-            android:label="@string/title_activity_profile"
-            android:parentActivityName=".LoginActivity"
+            android:name=".EditProfileActivity"
+            android:label="@string/title_activity_edit_profile"
+            android:parentActivityName=".ProfileActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="capstone.conestoga.pizzanpub24.LoginActivity" />
+                android:value="capstone.conestoga.pizzanpub24.ProfileActivity" />
         </activity>
         <activity
             android:name=".PaymentActivity"
             android:label="@string/title_activity_payment"
-            android:parentActivityName=".MakePizzaActivity">
+            android:parentActivityName=".CartActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="capstone.conestoga.pizzanpub24.MakePizzaActivity" />
+                android:value="capstone.conestoga.pizzanpub24.CartActivity" />
         </activity>
         <activity
             android:name=".TableReservationActivity"
             android:label="@string/title_activity_table_reservation"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="capstone.conestoga.pizzanpub24.MainActivity" />
+        </activity>
+        <activity android:name=".ResetPasswordActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="capstone.conestoga.pizzanpub24.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CartActivity"
+            android:label="@string/title_activity_cart"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="capstone.conestoga.pizzanpub24.MainActivity" />
         </activity>
-        <activity android:name=".ResetPasswordActivity"></activity>
     </application>
 
 </manifest>

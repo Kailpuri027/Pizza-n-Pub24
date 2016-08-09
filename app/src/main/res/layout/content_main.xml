@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="capstone.conestoga.pizzanpub24.MainActivity"
     tools:showIn="@layout/app_bar_main">
@@ -26,36 +28,40 @@
         android:src="@drawable/pizzabg" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textuser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pizza"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:text="Select order type" />
+        android:textColor="@android:color/black"
+        android:text="Hello Guest" />
 
-    <ImageButton
+    <Button
         android:id="@+id/deliveryButton"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:background="@color/colorAccent1"
+        android:text="Delivery"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/textuser"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/rect"
-        android:onClick="delivery"
-        android:scaleType="fitXY"
-        android:src="@drawable/deliverybutton" />
+        android:onClick="delivery" />
 
-    <ImageButton
+    <Button
         android:id="@+id/carryoutButton"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/deliveryButton"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
         android:layout_below="@+id/deliveryButton"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rect"
-        android:onClick="delivery"
-        android:scaleType="fitXY"
-        android:src="@drawable/carryoutbutton" />
+        android:background="@color/colorAccent1"
+        android:text="Carryout"
+        android:textColor="@android:color/white"
+        android:onClick="delivery" />
 
 </RelativeLayout>

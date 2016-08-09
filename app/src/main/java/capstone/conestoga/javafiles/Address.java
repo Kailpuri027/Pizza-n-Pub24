@@ -1,29 +1,27 @@
 package capstone.conestoga.javafiles;
 
 public class Address {
-    protected int address_id;
+    protected String user_id;
     protected String place;
     protected String zip_code;
 
-    public Address(int address_id, String place, String zip_code) {
+    public Address(){
+
+    }
+
+    public Address(String user_id, String place, String zip_code) {
         super();
-        this.address_id = address_id;
+        this.user_id = user_id;
         this.place = place;
         this.zip_code = zip_code;
     }
 
-    public Address(String place, String zip_code) {
-        super();
-        this.place = place;
-        this.zip_code = zip_code;
+    public String getUser_id() {
+        return user_id;
     }
 
-    public int getAddress_id() {
-        return address_id;
-    }
-
-    public void setAddress_id(int address_id) {
-        this.address_id = address_id;
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 
     public String getPlace() {

@@ -191,6 +191,8 @@ public class MenuActivity extends AppCompatActivity {
             case "Pizza":
                 Intent i = new Intent(this, PizzaActivity.class);
                 startActivity(i);
+                break;
+
         }
     }
 }

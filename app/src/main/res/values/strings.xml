@@ -34,9 +34,13 @@
     <string name="send_password_reset_email">Send Password reset email</string>
     <string name="remove_user">Remove user</string>
     <string name="new_pass">New Password</string>
+    <string name="new_pass_again">Enter Password Again</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="hint_name">Fullname</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_zip">Postal Address</string>
+    <string name="hint_npersons">Number of persons</string>
     <string name="btn_login">LOGIN</string>
     <string name="btn_link_to_register">Not a member? Get registered now!</string>
     <string name="btn_link_to_login">Already registered. Login Here!</string>
@@ -47,11 +51,26 @@
     <string name="hint_new_email">New Email</string>
     <string name="btn_change">Change</string>
     <string name="btn_send">Send</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_date">Pick Date</string>
+    <string name="btn_time">Pick Time</string>
+    <string name="btn_table">Make Reservation</string>
     <string name="btn_remove">Remove</string>
+    <string name="btn_sign_in">Sign In</string>
     <string name="btn_sign_out">Sign Out</string>
+    <string name="btn_makePizza">Make Pizza</string>
+    <string name="btn_selectaddress">Select Address</string>
+    <string name="btn_selectpizza">Select Pizza</string>
     <string name="prompt_password">Enter Password</string>
     <string name="lbl_forgot_password">Forgot password?</string>
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
-
-
+    <string name="title_activity_edit_profile">Edit Profile</string>
+    <string name="card_number">Card Number</string>
+    <string name="exp_date">MM/YY</string>
+    <string name="sec_no">Security Number</string>
+    <string name="btn_edit">Edit Profile</string>
+    <string name="btn_address">Show Address</string>
+    <string name="btn_add_address">Add Address</string>
+    <string name="btn_remove_address">Remove Address</string>
+    <string name="title_activity_cart">Order Cart</string>
 </resources>

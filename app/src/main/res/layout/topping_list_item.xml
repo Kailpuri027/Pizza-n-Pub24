@@ -8,4 +8,5 @@
     android:textAppearance="?android:attr/textAppearanceMedium"
     android:textColor="@color/cardview_dark_background"
     android:text="Topping"
+    android:orientation="vertical"
     android:id="@+id/topping" />

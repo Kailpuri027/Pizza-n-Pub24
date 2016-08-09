@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context="capstone.conestoga.pizzanpub24.TableReservationActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -20,6 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
+            app:titleEnabled="false"
+            android:background="@drawable/reservations_banner"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -40,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email"
+        android:src="@drawable/ic_login"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end" />
 

@@ -10,118 +10,141 @@
     tools:context="capstone.conestoga.pizzanpub24.MakePizzaActivity"
     android:background="@drawable/background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Crust"
-        android:gravity="center_vertical"
-        android:id="@+id/label"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"/>
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_toRightOf="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="5dp"
-        android:prompt="@string/spinner_title" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Size"
-        android:id="@+id/label1"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/label"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-    <RadioGroup
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/radiogroup"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/label"
-        android:layout_toEndOf="@+id/label1"
-        android:layout_toRightOf="@+id/label1">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Small"
-            android:id="@+id/size_s"
-            android:layout_marginLeft="10dp"/>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Medium"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/size_s"
-            android:id="@+id/size_m" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Large"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@+id/size_s"
-            android:id="@+id/size_l" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="X Large"
-            android:id="@+id/size_xl"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@+id/size_s"
-            android:layout_toRightOf="@+id/size_l"/>
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Meats"
-        android:id="@+id/label2"
-        android:layout_below="@+id/radiogroup"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:gravity="center_vertical" />
-
-    <ListView
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:id="@+id/toppings_list"
-        android:layout_below="@+id/label2"
-        android:layout_alignParentLeft="true"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/imageView">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crust Type"
+                android:gravity="center_vertical"
+                android:id="@+id/label"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_addCrust"
+                android:text="Select Crust"
+                android:background="@color/colorAccent1"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pizza Size"
+                android:id="@+id/label1"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_selectSize"
+                android:text="Select Size"
+                android:background="@color/colorAccent1"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toppings"
+                android:id="@+id/label2"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="center_vertical" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_addToppings"
+                android:text="Add Toppings"
+                android:background="@color/colorAccent1"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_vertical_margin"/>
+
+        </TableRow>
+
+    </TableLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Additional Descritpion"
-        android:layout_marginTop="10dp"
+        android:text="Additional Description"
         android:id="@+id/label3"
-        android:layout_below="@+id/toppings_list"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/tableLayout"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:gravity="center_vertical" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/label3"
-        android:inputType="textMultiLine"
-        android:ems="15"
-        android:id="@+id/additional" />
+        android:id="@+id/additional"
+        android:inputType="text"
+        android:singleLine="true"
+        android:layout_below="@+id/label3"/>
 
-    <ImageButton
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_makePizza"
+        android:text="@string/btn_makePizza"
+        android:background="@color/colorAccent1"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/additional"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_vertical_margin"/>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton2"
-        android:layout_below="@+id/additional"
+        android:text="Error"
+        android:id="@+id/error"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/makepizza"
-        android:onClick="payment"/>
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:gravity="center_vertical"
+        android:visibility="gone"/>
 
 </RelativeLayout>
